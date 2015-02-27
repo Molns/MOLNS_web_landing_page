@@ -10,24 +10,61 @@
 
 <BODY>
 <CENTER>
+
+<div class="container-fluid">
 <div class="row-fluid">
     <div class="span12">
+
         <div class="well well-large">
             <H1>MOLNS</H1>
             <H2>A cloud computing appliance for spatial stochastic simulation of biochemical systems.</H2>
             <BR><BR>
 
-            Welcome to the  Molns simulation appliance. Please go <A ID="ipython-link" HREF="https://##HOSTNAME##/">Here</A> to access the iPython interface.
-           <!-- StochSS is available <A HREF="https://##HOSTNAME##/">Here</A>.<BR> -->
-            Please note that due to the self-signed certification, you will see a warning before you can view the page.  Please accept the warning and proceed.
-        </div>
-    </div>
+            <!-- Welcome to the  Molns simulation appliance.--> 
+	    <a ID="ipython-link" class="btn btn-primary btn-large" href="https://##HOSTNAME##/" role="button">To the IPython Interface</a>
+	<BR><BR>
 
-<div class="span4">
-<img src="fancy3D.png" alt="">
+<!--Please go <A ID="ipython-link" HREF="https://##HOSTNAME##/">Here</A> to access the iPython interface.-->
+           <!-- StochSS is available <A HREF="https://##HOSTNAME##/">Here</A>.<BR> -->
+
+     <p class="text-info"> Please note that due to the self-signed certification, you will see a warning before you can view the page.  Please accept the warning and proceed.</p>
+        </div>
+     </div>
+</div>
+<div class="row-fluid">
+    <div class="span4">
+	<p class="text-centered lead">Write PyURDME models as sharable IPython notebooks</p>
+	<img src="fig1.png" alt="">
+        <a href="http://www.pyurdme.org">PyURDME API reference</a>
+
+    </div>  
+    <div class="span4">
+	<p class="text-centered lead">Advanced analysis with Python scientific libraries</p>
+	<img src="fig2.svg" alt="">
+	
+    </div> 
+   <div class="span4">        
+	<p class="text-centered lead">Large scale computational experiments made easy</p>
+        <img src="fig3.png" alt="">
+    </div>  
+ </div>
+
+<div class="row-fluid">
+<div class="span12">
+<hr>
+<center>
+<a href="https://github.com/MOLNs/"><h4>Visit MOLNs on GitHub</h4></a>
+</center>
 </div>
 </div>
-<div id="demo">Nothing here</div>
+
+
+<!--<div id="demo">Nothing here</div>-->
+
+
+</CENTER>
+
+<div id="demo"></div>
 
 <script>
 var currentPageUrlIs = "";
@@ -36,6 +73,6 @@ if (typeof this.href != "undefined") {
 }else{ 
        currentPageUrlIs = document.location.toString().toLowerCase();
 }
-document.getElementById('demo').innerHTML  = currentPageUrlIs
+//document.getElementById('demo').innerHTML  = currentPageUrlIs;
 document.getElementById('ipython-link').href  = currentPageUrlIs.replace('http://','https://');
 </script>
