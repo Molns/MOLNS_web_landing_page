@@ -17,7 +17,7 @@
             <H2>A cloud computing appliance for spatial stochastic simulation of biochemical systems.</H2>
             <BR><BR>
 
-            Welcome to the  Molns simulation appliance. Please go <A HREF="https://##HOSTNAME##/">Here</A> to access the iPython interface.
+            Welcome to the  Molns simulation appliance. Please go <A ID="ipython-link" HREF="https://##HOSTNAME##/">Here</A> to access the iPython interface.
            <!-- StochSS is available <A HREF="https://##HOSTNAME##/">Here</A>.<BR> -->
             Please note that due to the self-signed certification, you will see a warning before you can view the page.  Please accept the warning and proceed.
         </div>
@@ -27,3 +27,15 @@
 <img src="fancy3D.png" alt="">
 </div>
 </div>
+<div id="demo">Nothing here</div>
+
+<script>
+var currentPageUrlIs = "";
+if (typeof this.href != "undefined") {
+       currentPageUrlIs = this.href.toString().toLowerCase(); 
+}else{ 
+       currentPageUrlIs = document.location.toString().toLowerCase();
+}
+document.getElementById('demo').innerHTML  = currentPageUrlIs
+document.getElementById('ipython-link').href  = currentPageUrlIs.replace('http://','https://');
+</script>
